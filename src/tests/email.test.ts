@@ -2,7 +2,6 @@ import request from 'supertest';
 import app from '../server';
 const nodemailer = require("nodemailer");
 
-// Mock Nodemailer
 jest.mock('nodemailer');
 
 describe('Email integration test', () => {
