@@ -9,8 +9,9 @@ export const send_email = async (req: Request, res: Response) => {
 
   try {
     await sendEmail(object, messages, email);
+    res.send({message: "Email send seccuessfully !"})
   } catch (error) {
     console.log(error);
-      res.status(500).json({ error: "Erreur lors de l'envoie des mails" });
+      res.status(500).json({ error: "Failed to send email" });
   }
 };
